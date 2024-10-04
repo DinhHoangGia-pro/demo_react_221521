@@ -1,5 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import './assets/css/layout.css';
+import './assets/css/fonts.css'
+import MenuTop from './layouts/MenuTop';
+import MenuBox from './layouts/MenuBox';
+import Footer from './layouts/Footer';
 const Layout=()=>
     {
         return (
@@ -8,7 +12,7 @@ const Layout=()=>
 <div class="header_top">
 
     <div class="container_main">
-       Menutop
+       <MenuTop/>
     </div>
 
 </div>
@@ -26,7 +30,7 @@ const Layout=()=>
             </div>
 
             <div id="main_menu">
-                Box menu
+                <MenuBox/>
             </div>
 
         </div>
@@ -41,7 +45,7 @@ const Layout=()=>
     </div>
 </div>
     
-    Footer
+    <Footer/>
 
     </body>
 
