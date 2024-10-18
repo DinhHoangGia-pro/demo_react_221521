@@ -627,5 +627,31 @@ a {
   height: auto;
 }
 
+/*********************TRINH BAY SAN PHAM**************************/
 
+.news_left
+{
+   width: 800px;
+    height: 800px;
+    display: inline;
+    background-color: #fff;
+    float: left;
+}
 
+.list-news .item {
+  display: inline-block;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.div_img
+{
+  display:inline-block;float:left; width:30%;
+}
+
+.div_product
+{
+  width:70%; display:inline-block;float:left;
+}
