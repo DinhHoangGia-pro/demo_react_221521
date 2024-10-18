@@ -65,6 +65,13 @@ const Home=()=>
 
                     setArr3(new_arr3);                
                 }  
+
+
+            const XoaSV2=id=>{
+                const new_arr3=arr3.filter(phantu=>phantu.id!==id);
+                setArr3(new_arr3);  
+
+            }
     
         
         
@@ -125,6 +132,9 @@ const Home=()=>
                                  ID:{phantu.id}   Họ tên: {phantu.hoten}, Lớp:{phantu.lop}
 
                                  <input type="button" style={{backgroundColor:"greenyellow"}} value="Sửa sv" onClick={Suasinhvien2.bind(this, phantu.id)}/>
+                                
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="button" style={{backgroundColor:"royalblue"}} value="Sửa sv" onClick={XoaSV2.bind(this, phantu.id)}/>
                                 </p>
 
                         );
