@@ -25,9 +25,8 @@ body {
     font-size: 14px;
 }
 
- {
-    text-decoration: none;
-}
+ 
+
 a {
     color: #007bff;
     text-decoration: none;
@@ -779,4 +778,11 @@ body {
 }
 .back-button:hover {
   background-color: #2980b9;
+}
+
+ /* Description styles */
+ .product-description {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
 }
