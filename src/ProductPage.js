@@ -37,9 +37,13 @@ const ProductPage=()=>
 
 
                             <div class="product">
-                            <img src={phantu.image} alt={phantu.title}/>
+                            <a href="/ProductDetail">
+                             <img src={phantu.image} alt={phantu.title}/>
+                            </a>
                             <div class="product-info">
+                            <a href="/ProductDetail" class="product-title">
                                 <h2 class="product-title">{phantu.title}</h2>
+                            </a>
                                 <p class="product-price">{phantu.price}</p>
                                 <p class="product-description">{phantu.description}</p>
                             </div>

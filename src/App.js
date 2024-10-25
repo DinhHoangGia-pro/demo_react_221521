@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./Home";
 import ProductPage from './ProductPage';
+import ProductDetail from './ProductDetail';
 
 const App=()=> {
   // return (
@@ -24,6 +25,7 @@ const App=()=> {
         <Route path="/" element={<Layout />}>
           <Route index path="/Home1" element={<Home/>} />
           <Route index path="/" element={<ProductPage/>} />
+          <Route index path="/ProductDetail" element={<ProductDetail/>} />
          
         </Route>
       </Routes>
