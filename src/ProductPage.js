@@ -20,43 +20,40 @@ const ProductPage=()=>
                             console.log(err.message)
                         }
             
-                    }
-            
+                    }            
                     LayDulieutuBackend();            
 
             }
         ,[]);
     
         return (
-            <div class="news_left">
+            
+                 <div class="product-list">
                 
                 {
                     listproduct.map(phantu=>{
 
                         return (
-                            <div class="item">
-                            <div class="div_img">
-                                <a href="#">
-                                        <img class="img-responsive" alt="" src={phantu.image}/>
-                                </a>
+
+
+                            <div class="product">
+                            <img src={phantu.image} alt={phantu.title}/>
+                            <div class="product-info">
+                                <h2 class="product-title">{phantu.title}</h2>
+                                <p class="product-price">{phantu.price}</p>
+                                <p class="product-description">{phantu.description}</p>
                             </div>
-                            <div class="div_product">
-                                    <a href="#" class="news-title">
-                                        {phantu.title}  
-                                </a>
-                                <span class="des_news">
-                                        {phantu.description}
-                                </span>
                             </div>
-                        </div>
+
+                            
                         );
                     }
 
                     )
                 }
                 
-                
-            </div>
+                </div>
+            
         );
     } 
 export default ProductPage;
