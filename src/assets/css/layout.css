@@ -706,3 +706,77 @@ body {
   font-size: 1rem;
   color: #555;
 }
+
+  /* Image hover effect */
+  .product a img:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title link styles */
+.product-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+/* Title hover effect */
+.product-title:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/****************Product Detail***************************/
+
+.product-detail {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-detail img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 10px;
+}
+.product-price {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  text-align: center;
+  margin: 0 0 10px;
+}
+.product-description {
+  font-size: 1rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.6;
+}
+.back-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  text-align: center;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 20px auto;
+}
+.back-button:hover {
+  background-color: #2980b9;
+}
