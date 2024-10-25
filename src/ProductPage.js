@@ -23,11 +23,11 @@ const ProductPage = () => {
                 listproduct.map(phantu => { // Lặp qua từng phần tử trong mảng listproduct và render từng sản phẩm.
                     return (
                         <div class="product" key={phantu.id}> {/* Khối chứa thông tin từng sản phẩm */}
-                            <a href="/ProductDetail">
+                            <a href={"/product/"+phantu.id}>
                                 <img src={phantu.image} alt={phantu.title} /> {/* Hiển thị hình ảnh sản phẩm */}
                             </a>
                             <div class="product-info"> {/* Khối chứa thông tin chi tiết của sản phẩm */}
-                                <a href="/ProductDetail" class="product-title">
+                                <a href={"/product/"+phantu.id} class="product-title">
                                     <h2 class="product-title">{phantu.title}</h2> {/* Hiển thị tiêu đề sản phẩm */}
                                 </a>
                                 <p class="product-price">{phantu.price}</p> {/* Hiển thị giá sản phẩm */}

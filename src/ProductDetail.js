@@ -1,15 +1,50 @@
+import { useState, useEffect } from "react"; // Import useState và useEffect từ thư viện React để quản lý trạng thái và xử lý hiệu ứng.
+import axios from "axios"; // 
+
+import { useParams } from 'react-router-dom';
+
+
 const ProductDetail=()=>
 {
-    return (
+    const { id } = useParams(); // lấy id từ URL
+
+    console.log(id);
+
+    const [product, setProduct]=useState({
+        "id": 0,
+        "title": "",
+        "price": 0,
+        "description": "",
+        "category": "",
+        "image": ""
+        });
+
+    useEffect(() => {
+
+       
+
+            const LayDulieutuBackend = async () => { // Khởi tạo hàm bất đồng bộ để lấy dữ liệu từ backend.
+                try {
+                    const res = await axios.get('https://fakestoreapi.com/products/'+id);
+                    setProduct(res.data); // Cập nhật state listproduct với dữ liệu nhận được từ API.
+                } catch (err) {
+                    console.log(err.message); // Nếu xảy ra lỗi, log thông báo lỗi ra console.
+                }
+            };
+            LayDulieutuBackend(); // Gọi hàm để lấy dữ liệu từ backend khi component được render lần đầu.
+        }, []);
+
+
+    return (        
 
         <div class="product-detail">
-        <img src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg" alt="Tên sản phẩm"/>
-        <h2 class="product-title">Tên sản phẩm 1</h2>
-        <p class="product-price">Giá: 500,000 VND</p>
+        <img src={product.image} alt={product.title}/>
+        <h2 class="product-title">{product.title}</h2>
+        <p class="product-price">Giá: {product.price}</p>
         <p class="product-description">
-            Đây là mô tả chi tiết về sản phẩm 1. Sản phẩm này được thiết kế với những tính năng ưu việt, mang lại sự hài lòng tối đa cho người dùng. Chất liệu cao cấp, bền bỉ và thân thiện với môi trường, phù hợp với mọi nhu cầu sử dụng hàng ngày.
+            {product.title}
         </p>
-        <a href="danh-sach-san-pham.html" class="back-button">Quay lại Danh sách sản phẩm</a>
+        <a href="/" class="back-button">Quay lại Danh sách sản phẩm</a>
     </div>
 
     );
