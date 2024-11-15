@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"; // Import useState và useEffect từ thư viện React để quản lý trạng thái và xử lý hiệu ứng.
 import axios from "axios"; // 
 
+import RelatedProduct from './RelatedProduct';
+
 import { useParams } from 'react-router-dom';
 
 
@@ -25,7 +27,7 @@ const ProductDetail=()=>
 
             const LayDulieutuBackend = async () => { // Khởi tạo hàm bất đồng bộ để lấy dữ liệu từ backend.
                 try {
-                    const res = await axios.get('https://fakestoreapi.com/products/'+id);
+                    const res = await axios.get('https://6731c05f7aaf2a9aff11dd05.mockapi.io/products/'+id);
                     setProduct(res.data); // Cập nhật state listproduct với dữ liệu nhận được từ API.
                 } catch (err) {
                     console.log(err.message); // Nếu xảy ra lỗi, log thông báo lỗi ra console.
@@ -50,6 +52,10 @@ const ProductDetail=()=>
             {product.title}
         </p>
         <a href="/" class="back-button">Quay lại Danh sách sản phẩm</a>
+
+        {/* Thêm sản phẩm liên quan */}
+        <RelatedProduct category={product.category} currentId={id} />
+
     </div>
 
     );
