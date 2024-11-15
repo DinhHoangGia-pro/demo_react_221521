@@ -7,7 +7,9 @@ const RelatedProduct = ({ category, currentId }) => {
     useEffect(() => {
         const fetchRelatedProducts = async () => {
             try {
-                const res = await axios.get('https://6731c05f7aaf2a9aff11dd05.mockapi.io/products');
+                //const res = await axios.get('https://6731c05f7aaf2a9aff11dd05.mockapi.io/products');
+                //Viết select axios.get theo category để tối ưu hơn
+                const res = await axios.get('https://6731c05f7aaf2a9aff11dd05.mockapi.io/products?category='+category);
                 const filteredProducts = res.data.filter(
                     product => product.category === category && product.id !== currentId
                 );
